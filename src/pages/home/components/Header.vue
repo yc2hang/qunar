@@ -8,7 +8,7 @@
             输入城市/景点/游玩主题
         </div>
         <div class='header-right'>
-            北京
+            城市
             <span class='iconfont'>&#xe6aa;</span>
         </div>
     </div>
@@ -19,10 +19,11 @@ export default {
 }
 </script>
 <style lang="stylus" scoped>
+@import '~styles/varibles.styl'
 .header
     width: 100%
     line-height:.88rem
-    background: #00bcd4
+    background: $bgColor
     color: #fff
     font-size: .36rem
     display: flex
@@ -48,5 +49,4 @@ export default {
         padding: 0 .2rem
         float: right  
         text-align: center    
-        font-weight: bold     
 </style>

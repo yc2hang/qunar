@@ -5,13 +5,13 @@ import App from './App'
 import router from './router'
 
 //引入reset.css
-import './assets/styles/reset.css'
+import 'styles/reset.css'
 
 //引入border.css
-import './assets/styles/border.css'
+import 'styles/border.css'
 
 //引入iconfont
-import './assets/styles/iconfont.css'
+import 'styles/iconfont.css'
 
 //解决300ms延迟
 import FastClick from 'fastclick'
