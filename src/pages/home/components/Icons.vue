@@ -15,66 +15,69 @@
 <script>
 export default {
     name:'HomeIcons',
+    props:{
+        list:Array
+    },
     data() {
         return {
-            iconsList:[
-                {
-                    id:'01',
-                    imgUrl:'//s.qunarzz.com/homenode/images/touchheader/group.png',
-                    desc:'特惠酒店'
-                },
-                {
-                    id:'02',
-                    imgUrl:'//s.qunarzz.com/homenode/images/touchheader/bargainflight.png',
-                    desc:'低价机票 '
-                },
-                {
-                    id:'03',
-                    imgUrl:'//s.qunarzz.com/homenode/images/touchheader/inn.png',
-                    desc:'客栈 '
-                },
-                {
-                    id:'04',
-                    imgUrl:'//s.qunarzz.com/homenode/images/touchheader/haiwai.png',
-                    desc:'海外酒店 '
-                },
-                {
-                    id:'05',
-                    imgUrl:'//s.qunarzz.com/homenode/images/touchheader/bus.png',
-                    desc:'汽车票船票 '
-                },
-                {
-                    id:'06',
-                    imgUrl:'//s.qunarzz.com/homenode/images/touchheader/tuan.png',
-                    desc:'旅游团购 '
-                },
-                {
-                    id:'07',
-                    imgUrl:'//s.qunarzz.com/homenode/images/touchheader/freeTravel.png',
-                    desc:'自由行 '
-                },
-                {
-                    id:'08',
-                    imgUrl:'//s.qunarzz.com/homenode/images/touchheader/car.png',
-                    desc:'专车自驾 '
-                },
-                {
-                    id:'09',
-                    imgUrl:'//s.qunarzz.com/homenode/images/touchheader/aroundtravel.png',
-                    desc:'周边短途 '
-                },
-                {
-                    id:'10',
-                    imgUrl:'//s.qunarzz.com/homenode/images/touchheader/jr.png',
-                    desc:'金融理财 '
-                }
-            ]
+            // iconsList:[
+            //     {
+            //         id:'01',
+            //         imgUrl:'//s.qunarzz.com/homenode/images/touchheader/group.png',
+            //         desc:'特惠酒店'
+            //     },
+            //     {
+            //         id:'02',
+            //         imgUrl:'//s.qunarzz.com/homenode/images/touchheader/bargainflight.png',
+            //         desc:'低价机票 '
+            //     },
+            //     {
+            //         id:'03',
+            //         imgUrl:'//s.qunarzz.com/homenode/images/touchheader/inn.png',
+            //         desc:'客栈 '
+            //     },
+            //     {
+            //         id:'04',
+            //         imgUrl:'//s.qunarzz.com/homenode/images/touchheader/haiwai.png',
+            //         desc:'海外酒店 '
+            //     },
+            //     {
+            //         id:'05',
+            //         imgUrl:'//s.qunarzz.com/homenode/images/touchheader/bus.png',
+            //         desc:'汽车票船票 '
+            //     },
+            //     {
+            //         id:'06',
+            //         imgUrl:'//s.qunarzz.com/homenode/images/touchheader/tuan.png',
+            //         desc:'旅游团购 '
+            //     },
+            //     {
+            //         id:'07',
+            //         imgUrl:'//s.qunarzz.com/homenode/images/touchheader/freeTravel.png',
+            //         desc:'自由行 '
+            //     },
+            //     {
+            //         id:'08',
+            //         imgUrl:'//s.qunarzz.com/homenode/images/touchheader/car.png',
+            //         desc:'专车自驾 '
+            //     },
+            //     {
+            //         id:'09',
+            //         imgUrl:'//s.qunarzz.com/homenode/images/touchheader/aroundtravel.png',
+            //         desc:'周边短途 '
+            //     },
+            //     {
+            //         id:'10',
+            //         imgUrl:'//s.qunarzz.com/homenode/images/touchheader/jr.png',
+            //         desc:'金融理财 '
+            //     }
+            // ]
         }
     },
     computed: {
         pages (){
             const pages = [];
-            this.iconsList.forEach((item,index) => {
+            this.list.forEach((item,index) => {
                 const page = Math.floor(index / 8)
                 if(!pages[page]){
                     pages[page] = [];
