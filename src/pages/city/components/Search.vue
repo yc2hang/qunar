@@ -9,7 +9,14 @@
             v-show='keyword'
         >
             <ul>
-                <li class='search-item border-bottom' v-for="(item, index) in list" :key="index">{{item.name}}</li>
+                <li 
+                    class='search-item border-bottom' 
+                    v-for="(item, index) in list" 
+                    :key="index"
+                    @click='handleCityClick(item.name)'
+                >
+                    {{item.name}}
+                </li>
                 <li class='search-item border-bottom' v-show="hasNoData">没有找到匹配数据</li>
             </ul>
         </div>
@@ -28,6 +35,12 @@ export default {
     },
     props:{
         cities:Object
+    },
+    methods: {
+        handleCityClick(city){
+            this.$store.commit('changeCity', city) 
+            this.$router.push('/')
+        }
     },
     computed: {
         hasNoData () {

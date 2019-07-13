@@ -9,18 +9,16 @@
         </div>
         <router-link to='/city'>
             <div class='header-right'>
-                {{this.city}}
+                {{this.$store.state.city}}
                 <span class='iconfont'>&#xe6aa;</span>
             </div>
         </router-link>
     </div>
 </template>
 <script>
+import store from '@/store/index.js'
 export default {
     name:'HomeHeader',
-    props:{
-        city:String
-    }
 }
 </script>
 <style lang="stylus" scoped>
